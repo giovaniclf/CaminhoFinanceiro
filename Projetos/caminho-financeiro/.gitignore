@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+
+# Configurações locais
+.env
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Pastas de cache e logs
+.cache/
+logs/
