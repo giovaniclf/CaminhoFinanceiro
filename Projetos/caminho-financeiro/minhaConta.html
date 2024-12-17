@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Carteiras</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <section id="cadastro-clientes">
+      <h2>Cadastro de Carteiras</h2>
+      <form id="form-cadastro-carteira">
+        <label for="nome-cliente">Nome do Cliente:</label>
+        <input
+          type="text"
+          id="nome-cliente"
+          name="nome-cliente"
+          placeholder="Seu nome"
+          required
+        />
+
+        <label for="email-cliente">E-mail:</label>
+        <input
+          type="email"
+          id="email-cliente"
+          name="email-cliente"
+          placeholder="Seu e-mail"
+          required
+        />
+
+        <label for="nome-carteira">Nome da Carteira:</label>
+        <input
+          type="text"
+          id="nome-carteira"
+          name="nome-carteira"
+          placeholder="Ex: Minha Carteira #1"
+          required
+        />
+
+        <label for="ativos">Ativos (separados por vírgula):</label>
+        <textarea
+          id="ativos"
+          name="ativos"
+          rows="3"
+          placeholder="Ex: PETR4, VALE3, ITUB4"
+          required
+        ></textarea>
+
+        <button type="submit">Salvar Carteira</button>
+      </form>
+    </section>
+
+    <script>
+      document
+        .getElementById("form-cadastro-carteira")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const nomeCliente = document.getElementById("nome-cliente").value;
+          const emailCliente = document.getElementById("email-cliente").value;
+          const nomeCarteira = document.getElementById("nome-carteira").value;
+          const ativos = document.getElementById("ativos").value;
+
+          const carteira = {
+            nomeCliente,
+            emailCliente,
+            nomeCarteira,
+            ativos: ativos.split(",").map((item) => item.trim()),
+          };
+
+          let carteirasSalvas =
+            JSON.parse(localStorage.getItem("carteiras")) || [];
+          carteirasSalvas.push(carteira);
+          localStorage.setItem("carteiras", JSON.stringify(carteirasSalvas));
+
+          alert("Carteira salva com sucesso!");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

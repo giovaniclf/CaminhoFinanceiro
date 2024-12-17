@@ -1,0 +1,185 @@
+/*Base*/
+:root {
+    --cor-primaria: #4caf50;
+    --cor-secundaria: #0073e6;
+    --texto-primario: #333;
+    --background-primario: #f5f5f5;
+  }
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fefefe; 
+    line-height: 1.6; 
+}
+
+/*Layout Principal*/
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+section {
+    margin-bottom: 2em;
+}
+#banner {
+    text-align: center;
+    padding: 2em;
+    background-color: #a8d5ba;
+    color: #333333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    margin: 1em auto; 
+    width: 90%;
+    max-width: 1200px;
+}
+#investimentos {
+    padding: 2em 1em;
+    background-color: #f4f4f4;
+    color: #333333;
+    text-align: center;
+}
+#investimentos h2 {    
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    color: #85c1e9;
+}
+#contato {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+  }
+#contato a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+#contato a:hover {
+    text-decoration: underline;
+  }
+  
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #85c1e9;
+    color: white;
+}
+header nav ul {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+/*Navegação e Elementos Específicos*/
+nav ul { 
+    list-style: none;
+    padding: 0;
+}
+nav ul li { 
+    display: inline;
+    margin: 0 1em;
+}
+nav ul li a { 
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em; 
+    transition: color 0.3s ease; 
+}
+nav ul li a:hover { 
+    color: #a8d5ba;
+}
+
+/*Componentes ou Blocos Específicos*/
+table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 1em;
+}
+thead th {
+    background-color: #85c1e9;
+    color: white;
+    padding: 0.5em;
+}
+tbody td {
+    border: 1px solid #ddd;
+    padding: 0.8em;
+    text-align: center;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tbody tr:hover {
+    background-color: #D5F5E3;
+    cursor: pointer; 
+}
+
+/*Tela conta dos clientes*/
+#cadastro-clientes {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0f8ff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cadastro-clientes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #form-cadastro-carteira {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #form-cadastro-carteira label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #form-cadastro-carteira input,
+  #form-cadastro-carteira textarea {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #form-cadastro-carteira button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #form-cadastro-carteira button:hover {
+    background-color: #005bb5;
+  }
+/*Responsividade e Media Queries*/
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    thead th {
+        background-color: #85c1e9;
+        position: sticky; 
+        top: 0;
+    }
+    header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
