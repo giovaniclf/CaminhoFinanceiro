@@ -188,20 +188,27 @@ footer:hover {
   }
 
   .nav-links {
-      margin-top: 1rem;
+      display: none; /* Esconde o menu padrão */
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      margin-top: 1rem;
   }
 
-  .nav-links li {
-      margin: 0.5rem 0;
+  .nav-links.active {
+      display: flex; /* Mostra o menu quando ativo */
   }
 
-  .intro h1 {
-      font-size: 2rem;
+  .hamburger {
+      display: block;
+      cursor: pointer;
   }
 
-  section {
-      padding: 1.5rem;
+  .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: #333;
   }
 }
