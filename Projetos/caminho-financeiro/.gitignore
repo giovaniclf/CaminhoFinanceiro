@@ -11,3 +11,27 @@ Thumbs.db
 # Pastas de cache e logs
 .cache/
 logs/
+*.log
+
+# Configurações do VS Code
+.vscode/
+
+# Pastas temporárias ou de build
+temp/
+dist/
+build/
+
+# Backups e arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Testes e cobertura
+__tests__/
+coverage/
+*.test.js
+*.spec.js
+
+# Favicon e arquivos gerados automaticamente
+favicon.ico
