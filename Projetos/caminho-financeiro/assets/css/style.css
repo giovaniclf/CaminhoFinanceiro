@@ -102,8 +102,8 @@ section {
 }
 
 section:hover {
-  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 section h2 {
@@ -119,24 +119,115 @@ section p, section ul {
   margin-bottom: 1rem;
 }
 
-section ul {
-  list-style: none;
-  padding-left: 0;
+/* Formulários - Login e Contato */
+.form-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-section ul li {
-  margin: 0.5rem 0;
+.form-container h1 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 1rem;
 }
 
-section ul a {
+.form-container label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-container input, 
+.form-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-container button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #004494;
+}
+
+.form-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form-container a {
   color: #0056b3;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
 
-section ul a:hover {
-  color: #003d7a;
+.form-container a:hover {
   text-decoration: underline;
+}
+/* Seção Sobre */
+.sobre {
+  max-width: 800px;
+  margin: 2rem auto; 
+  padding: 2rem; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out; 
+}
+
+.sobre h1, .sobre h2 {
+  color: #0056b3; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+  font-size: 2rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  color: #444; 
+  line-height: 1.8; 
+  margin-bottom: 1.5rem;
+  text-align: justify; 
+}
+
+/* Lista de Contato */
+.contato-info {
+  list-style: none; 
+  padding: 0; 
+  text-align: center;
+}
+
+.contato-info li {
+  margin-bottom: 1rem; /
+  font-size: 1rem; 
+}
+
+.contato-info a {
+  color: #0056b3; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.contato-info a:hover {
+  text-decoration: underline; 
+  color: #004494; 
 }
 
 /* Footer */
@@ -146,7 +237,6 @@ footer {
   text-align: center;
   padding: 1.5rem 0;
   margin-top: 2rem;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .footer-content p {
@@ -154,19 +244,14 @@ footer {
   font-size: 0.9rem;
 }
 
-footer:hover {
-  background-color: #222; /* Efeito escurecido ao passar o mouse */
-}
-
-.footer-content a {
+footer a {
   color: #f4f4f4;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
 
-.footer-content a:hover {
+footer a:hover {
   text-decoration: underline;
-  color: #e8f0ff; /* Azul suave */
+  color: #e8f0ff;
 }
 
 /* Animação Fade-In */
@@ -184,31 +269,30 @@ footer:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   nav {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .nav-links {
-      display: none; /* Esconde o menu padrão */
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .nav-links.active {
-      display: flex; /* Mostra o menu quando ativo */
+    display: flex;
   }
 
   .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .hamburger span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px;
-      background: #333;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: #333;
   }
 }
