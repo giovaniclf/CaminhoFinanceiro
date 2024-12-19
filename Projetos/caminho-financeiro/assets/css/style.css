@@ -49,7 +49,8 @@ nav {
 
 .nav-links {
   list-style: none;
-  display: flex;
+  display: flex; /* Padrão: links visíveis */
+  justify-content: flex-end;
 }
 
 .nav-links li {
@@ -89,6 +90,38 @@ nav {
   max-width: 800px;
   margin: 0 auto;
 }
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #0056b3;
+}
+
+.card p {
+  color: #333;
+}
+
 
 /* Seções com efeito de sombra */
 section {
@@ -215,7 +248,7 @@ section p, section ul {
 }
 
 .contato-info li {
-  margin-bottom: 1rem; /
+  margin-bottom: 1rem;
   font-size: 1rem; 
 }
 
@@ -268,19 +301,21 @@ footer a:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
   .nav-links {
-    display: none;
+    display: none; /* Esconde por padrão */
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
     width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* Exibe ao ativar */
   }
 
   .hamburger {
@@ -293,6 +328,7 @@ footer a:hover {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background: #333;
+    background-color: #333;
+    transition: all 0.3s ease;
   }
 }
